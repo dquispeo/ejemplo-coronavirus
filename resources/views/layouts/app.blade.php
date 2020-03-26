@@ -14,9 +14,15 @@
 </head>
 <body>
         <nav class="navbar navbar-expand-lg  navbar-dark bg-dark fixed-top">
+        @guest
+        <a class="navbar-brand" href="{{ url('/') }}" title="Inicio">
+        <img src="{{ asset('img/logo.png') }}" height="30" width="30"> Coronavirus
+        </a>
+        @else
         <a class="navbar-brand" href="{{ url('/home') }}" title="Inicio">
         <img src="{{ asset('img/logo.png') }}" height="30" width="30"> Coronavirus
         </a>
+        @endguest
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
         </button>

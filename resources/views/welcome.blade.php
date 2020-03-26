@@ -12,16 +12,43 @@
     </head>
     <body>
       <nav class="navbar navbar-expand-lg  navbar-dark bg-dark fixed-top">
+      @guest
+      <a class="navbar-brand" href="{{ url('/') }}" title="Inicio">
+      <img src="{{ asset('img/logo.png') }}" height="30" width="30"> Coronavirus
+      </a>
+      @else
       <a class="navbar-brand" href="{{ url('/home') }}" title="Inicio">
       <img src="{{ asset('img/logo.png') }}" height="30" width="30"> Coronavirus
       </a>
+      @endguest
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-
+      <li class="nav-item">
+      </li>
       </ul>
+
+      @guest
+      @else
+      <ul class="navbar-nav mr-auto" style="margin-left:5px;">
+        <li class="nav-item">
+          <a class="btn btn-dark nav-link" href="{{ url('sintomas') }}" title="Síntomas">
+          Síntomas<span class="caret"></span>
+          </a>
+        </li>
+      </ul>
+      <ul class="navbar-nav mr-auto" style="margin-left:5px;">
+        <li class="nav-item">
+          <a class="btn btn-dark nav-link" href="{{ url('prevencion') }}" title="Prevención">
+          Prevención<span class="caret"></span>
+          </a>
+        </li>
+      </ul>
+      @endguest
+
+
       @guest
       <ul class="navbar-nav">
       <li class="nav-item active">
@@ -33,43 +60,20 @@
       </ul>
       @else
       <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-
-      <ul class="navbar-nav">
-      <li>
-      <a class="btn btn-dark nav-link" href="{{ url('/licencias_vigentes') }}"
-      title="Licencias vigentes">
-      <i style="color:#40B537;" class="fas fa-bell"></i>
-      </a>
-      </li>
-      </ul>
-      <ul class="navbar-nav">
-      <li>
-      <a class="btn btn-dark nav-link" title="Notificaciones" href="{{ url('/notificaciones') }}">
-      <!--  <i class="fas fa-bell"></i> <span class="badge badge-light">{ count($notificas) }}</span>
-      <span class="badge badge-light"> </span> -->
-      <i style="color:#CF1F0A;" class="fas fa-bell"></i>
-      </a>
-      </li>
-      </ul>
-      <ul class="navbar-nav">
-      <li>
-      <a class="btn btn-dark nav-link" data-toggle="modal" data-target=".bd-example-modal-xl-ajustes"
-      title="Ajustes">
-      Ajustes <i class="fas fa-tools"></i> <span class="caret"></span>
-      </a>
-      </li>
-      </ul>
-
       <ul class="navbar-nav">
       <li class="nav-item dropdown">
-        @if (Route::has('login'))
-                @auth
-                    <a href="{{ url('/home') }}">Página principal</a>
-                @else
-                    <a href="{{ route('login') }}">Login</a>
-                    <a href="{{ route('register') }}">Registrarse</a>
-                @endauth
-        @endif
+      <a id="navbarDropdown" class="btn btn-dark nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+      aria-haspopup="true" aria-expanded="false" v-pre title="{{ Auth::user()->name }}">
+      <i class="fas fa-user-circle"></i> {{ Auth::user()->name }} <span class="caret"></span>
+      </a>
+      <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="navbarDropdown">
+      <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="fas fa-sign-out-alt"></i>
+      {{ __('Cerrar Sesión') }}
+      </a>
+      <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+      {{ csrf_field() }}
+      </form>
+      </div>
       </li>
       </ul>
       </div>
@@ -78,6 +82,11 @@
       </nav>
 
 <div class="container" style="margin-top:70px;">
+  <div class="card text-center">
+<div class="card-header">
+  <h3>Coronavirus</h3>
+</div>
+<div class="card-body">
   <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
       <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -104,6 +113,15 @@
       <span class="sr-only">Next</span>
     </a>
   </div>
+</div>
+<div class="card-footer text-muted">
+  <a href="https://www.google.com/search?q=coronavirus&oq=coronavirus&aqs=chrome..69i57j69i60l3j0l3.5896j0j7&sourceid=chrome&ie=UTF-8" class="btn btn-primary" target="_blank">Más búsquedas en Google</a>
+</div>
+</div>
+
+
+
+
 
 </div>
 <br>
