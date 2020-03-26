@@ -1,11 +1,13 @@
 @extends('layouts.app')
-
+@section('title','Inicio')
 @section('content')
-<div class="container">
+<div class="container" style="margin-top:70px;">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Dashboard</div>
+              <div class="alert alert-success" role="alert">
+A simple success alert—check it out!
+</div>
 
                 <div class="panel-body">
                     @if (session('status'))
