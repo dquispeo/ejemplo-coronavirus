@@ -19,7 +19,7 @@
   <a href="https://www.google.com/search?ei=aS99XsLcFdCp_Qa7mproBg&q=que+es+el+coronavirus&oq=que+es+el+coronavirus&gs_l=psy-ab.3.0.0i131l4j0l2j0i131j0l2j0i3.210846.213661..215746...0.0..0.440.3831.2-4j7j1......0....1..gws-wiz.QbfikMrb99w" class="btn btn-primary" target="_blank">Más búsquedas en Google</a>
 </div>
 <div class="card-footer text-muted">
-  <img src="{{ asset('img/mapa.png') }}" class="img-fluid" alt="Responsive image">
+  <img src="{{ asset('img/coronavirus.jpg') }}" class="img-fluid" alt="Responsive image">
 </div>
 </div>
 </div>

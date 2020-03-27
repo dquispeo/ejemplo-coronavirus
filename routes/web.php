@@ -23,6 +23,14 @@ Route::get('prevencion', function () {
     return view('prevencion');
 });
 
+Route::get('tipos', function () {
+    return view('tipos');
+});
+
+Route::get('informacion', function () {
+    return view('informacion');
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

@@ -4,8 +4,8 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Coronavirus</title>
         <link rel="icon" type="image/png" href="{{ asset('img/logo.png') }}">
+        <title>Coronavirus</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
         <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
@@ -43,6 +43,20 @@
         <li class="nav-item">
           <a class="btn btn-dark nav-link" href="{{ url('prevencion') }}" title="Prevención">
           Prevención<span class="caret"></span>
+          </a>
+        </li>
+      </ul>
+      <ul class="navbar-nav mr-auto" style="margin-left:5px;">
+        <li class="nav-item">
+          <a class="btn btn-dark nav-link" href="{{ url('tipos') }}" title="Tipos">
+          Tipos<span class="caret"></span>
+          </a>
+        </li>
+      </ul>
+      <ul class="navbar-nav mr-auto" style="margin-left:5px;">
+        <li class="nav-item">
+          <a class="btn btn-dark nav-link" href="{{ url('informacion') }}" title="Mapa y más información">
+          Mapa y más información<span class="caret"></span>
           </a>
         </li>
       </ul>

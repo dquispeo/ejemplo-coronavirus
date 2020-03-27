@@ -48,6 +48,20 @@
             </a>
           </li>
         </ul>
+        <ul class="navbar-nav mr-auto" style="margin-left:5px;">
+          <li class="nav-item">
+            <a class="btn btn-dark nav-link" href="{{ url('tipos') }}" title="Tipos">
+            Tipos<span class="caret"></span>
+            </a>
+          </li>
+        </ul>
+        <ul class="navbar-nav mr-auto" style="margin-left:5px;">
+          <li class="nav-item">
+            <a class="btn btn-dark nav-link" href="{{ url('informacion') }}" title="Mapa y más información">
+            Mapa y más información<span class="caret"></span>
+            </a>
+          </li>
+        </ul>
         @endguest
 
 
