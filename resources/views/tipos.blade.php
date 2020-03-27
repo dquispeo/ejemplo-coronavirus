@@ -19,7 +19,7 @@
   <a href="https://www.nationalgeographic.com.es/ciencia/7-tipos-coronavirus-que-infectan-humanos_15353" class="btn btn-primary" target="_blank">Algunos tipos más</a>
 </div>
 <div class="card-footer text-muted">
-  <img src="{{ asset('img/tipos.png') }}" class="img-fluid" alt="Responsive image">
+  <img src="{{ asset('img/tipo.png') }}" class="img-fluid" alt="Responsive image">
 </div>
 </div>
 </div>
